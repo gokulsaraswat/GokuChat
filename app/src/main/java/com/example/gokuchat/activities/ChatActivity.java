@@ -99,7 +99,6 @@ public class ChatActivity extends BaseActivity {
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        throw new RuntimeException(e);
                     }
                     showToast("Notification Sent Successfully");
                 }else{
@@ -236,7 +235,7 @@ public class ChatActivity extends BaseActivity {
     };
     private Bitmap getBitmapFromEncodedString(String encodedImage) {
         if (encodedImage != null) {
-            byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
+            byte[] bytes = android.util.Base64.decode(encodedImage, android.util.Base64.DEFAULT);
             return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         }else{
             return null;
