@@ -1,7 +1,6 @@
 package com.example.gokuchat.activities;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +13,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class BaseActivity extends AppCompatActivity {
     private DocumentReference documentReference;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         PreferenceManager preferenceManager = new PreferenceManager(getApplicationContext());
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         documentReference = database.collection(Constants.KEY_COLLECTION_USERS)

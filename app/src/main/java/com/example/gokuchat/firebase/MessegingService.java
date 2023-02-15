@@ -7,7 +7,6 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -27,13 +26,13 @@ public class MessegingService extends FirebaseMessagingService {
     @Override
     public void onNewToken(@NonNull String s) {
         super.onNewToken(s);
-        Log.d("FCM", "s");
+//        Log.d("FCM", "s");
     }
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Log.d("FCM", "Message" + remoteMessage.getNotification().getBody());
+//        Log.d("FCM", "Message" + remoteMessage.getNotification().getBody());
         User user = new User();
         user.id = remoteMessage.getData().get(Constants.KEY_USER_ID);
         user.name = remoteMessage.getData().get(Constants.KEY_NAME);
