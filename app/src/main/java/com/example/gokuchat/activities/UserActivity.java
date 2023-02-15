@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.gokuchat.adapters.UserAdapter;
 import com.example.gokuchat.databinding.ActivityUserBinding;
 import com.example.gokuchat.listeners.UserListener;
@@ -18,7 +16,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserActivity extends AppCompatActivity implements UserListener {
+public class UserActivity extends BaseActivity implements UserListener {
 
     private ActivityUserBinding binding;
     private PreferenceManager preferenceManager;

@@ -63,5 +63,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 // AndroidStudio suggested a newer version was available
 
+    //RetroFit
+    implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    implementation 'com.squareup.retrofit2:converter-scalars:(insert latest version)'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
 
 }

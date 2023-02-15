@@ -8,8 +8,6 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.gokuchat.adapters.RecentConversationAdapter;
 import com.example.gokuchat.databinding.ActivityMainBinding;
 import com.example.gokuchat.listeners.ConversationListener;
@@ -31,7 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity implements ConversationListener {
+public class MainActivity extends BaseActivity implements ConversationListener {
 
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;

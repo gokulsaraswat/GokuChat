@@ -52,7 +52,7 @@
         android:src="@drawable/ic_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
+        app:tint="@color/white"
         />
 
     <TextView
@@ -85,6 +85,19 @@
 
 
 
+    <TextView
+        android:id="@+id/textAvailability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+        android:text="@string/online"
+        android:gravity="center"
+        android:background="@color/Green"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:padding="@dimen/_2sdp"
+        android:visibility="gone"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
@@ -98,7 +111,7 @@
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+        app:layout_constraintTop_toBottomOf="@id/textAvailability"
 
         />
 
