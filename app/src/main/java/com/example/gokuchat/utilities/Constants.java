@@ -1,5 +1,7 @@
 package com.example.gokuchat.utilities;
 
+import java.util.HashMap;
+
 public class Constants {
     public static final String KEY_COLLECTION_USERS = "users";
     public static final String KEY_NAME = "name";
@@ -25,7 +27,25 @@ public class Constants {
 
     public static final String KEY_AVAILABILITY = "availability";
 
+    public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
+    public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
+    public static final String REMOTE_MSG_DATA = "data";
+    public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
 
-
+    public static HashMap<String,String> remoteMsgHeaders = null;
+    public static HashMap<String,String> getRemoteMsgHeaders() {
+        if (remoteMsgHeaders == null) {
+            remoteMsgHeaders = new HashMap<>();
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_AUTHORIZATION,
+                    "key=AAAAhvhGVsA:APA91bFWJFQY5Xg3HnA5b7JbXiyCxqdSx88wxxR0gnobC6ZpUlkvxsN0LxRgOB-hqvst253-9y8juwLsv8t1bDcARnsKSgWHb0gZ74jUODdCk19iYvcQaNrU0tTMykFKAoG1iSbseVHt"
+            );
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_CONTENT_TYPE,
+                    "application/json"
+            );
+        }
+        return remoteMsgHeaders;
+    }
 
 }
